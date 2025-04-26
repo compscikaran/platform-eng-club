@@ -25,13 +25,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#38b6ff] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-[#ffffff] mb-4">
             Platform Engineering Learning Path
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-white/90">
             Master the essentials of Platform Engineering and Internal Developer Platforms
           </p>
         </div>
@@ -54,3 +54,4 @@ const Index = () => {
 };
 
 export default Index;
+
