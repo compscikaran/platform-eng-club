@@ -25,13 +25,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#38b6ff] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#ffffff] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-[#ffffff] mb-4">
+          <h1 className="text-4xl font-bold text-[#38b6ff] mb-4">
             Platform Engineering Learning Path
           </h1>
-          <p className="text-lg text-white/90">
+          <p className="text-lg text-gray-600">
             Master the essentials of Platform Engineering and Internal Developer Platforms
           </p>
         </div>
