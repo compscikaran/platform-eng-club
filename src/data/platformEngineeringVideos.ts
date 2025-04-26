@@ -4,26 +4,32 @@ import { Video } from "../types/video";
 export const videos: Video[] = [
   {
     id: "1",
-    title: "What is Platform Engineering?",
-    youtubeId: "wXjZoSs4YpE",
-    description: "Learn about Platform Engineering and its importance in modern software development.",
+    title: "10 things we hate about platform engineering",
+    youtubeId: "esvydx09PEA",
+    description: "Emma Dahl Jeppesen and Dan Grøndahl, Platform Advocate @ Velux, The Devops Conference",
   },
   {
     id: "2",
-    title: "Building Internal Developer Platforms",
-    youtubeId: "l5g77E0IKkU",
-    description: "Understand the key concepts behind building effective internal developer platforms.",
+    title: "The Magic of Platforms",
+    youtubeId: "WaL3ZbLgMuI",
+    description: "Gregor Hohpe, Principal Evangelist @ AWS, PlatformCon 2022",
   },
   {
     id: "3",
-    title: "Platform Engineering vs DevOps",
-    youtubeId: "0vVo5PB7kfE",
-    description: "Explore the differences between Platform Engineering and traditional DevOps.",
+    title: "Platforms = (Architecture + DDD + Automation) x Wholesale ",
+    youtubeId: "iP-qzK4mQuI",
+    description: "Gregor Hohpe, Principal Evangelist @ AWS, PlatformCon 2024",
   },
   {
     id: "4",
-    title: "Developer Experience and Platform Engineering",
-    youtubeId: "x8nB86MqhDc",
-    description: "Deep dive into how Platform Engineering improves developer experience.",
+    title: "Passion for developer experience",
+    youtubeId: "PcjtqzSTtu4",
+    description: "Greg Foster, CTO @ Graphite",
+  },
+  {
+    id: "5",
+    title: ""Invisible" Platform Engineeering",
+    youtubeId: "M4Q4aXhJDb0",
+    description: "Punit Lad, Lead Consultant @ Thoughtworks, PlatformCon 2024",
   }
 ];
