@@ -28,7 +28,7 @@ export const videos: Video[] = [
   },
   {
     id: "5",
-    title: ""Invisible" Platform Engineeering",
+    title: "Invisible Platform Engineeering",
     youtubeId: "M4Q4aXhJDb0",
     description: "Punit Lad, Lead Consultant @ Thoughtworks, PlatformCon 2024",
   }
