@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { videos } from '../data/platformEngineeringVideos';
 import VideoCard from '../components/VideoCard';
@@ -37,7 +38,7 @@ const Index = () => {
 
         <ProgressBar completed={watchedVideos.length} total={videos.length} />
 
-        <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {videos.map(video => (
             <VideoCard
               key={video.id}
@@ -53,3 +54,4 @@ const Index = () => {
 };
 
 export default Index;
+
