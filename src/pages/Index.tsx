@@ -18,9 +18,11 @@ const Index = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-[#38b6ff] mb-4">Platform Engineering Club</h1>
-          <p className="text-lg text-gray-600">
-            Master the essentials of Platform Engineering and Internal Developer Platforms
-          </p>
+          <p className="text-lg text-gray-600 text-left">Our mission is to help engineers build developer platforms. We focus on building platforms that are adored by users, flourish organically not due to mandates, are a breeze to operate. 
+I am engineer working on building a data platform used by data scientists and analysts to build reporting solutions. 
+Below is a list of curated talks which have helped me understand how a platform which caters to a technical audience is built and operated.
+
+        </p>
         </div>
 
         <ProgressBar completed={watchedVideos.length} total={videos.length} />
