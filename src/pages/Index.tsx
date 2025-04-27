@@ -3,6 +3,8 @@ import { videos } from '../data/platformEngineeringVideos';
 import VideoCard from '../components/VideoCard';
 import ProgressBar from '../components/ProgressBar';
 import Footer from '../components/Footer';
+import ReactConfetti from 'react-confetti';
+import { toast } from "sonner";
 
 const WATCHED_VIDEOS_KEY = 'platform-engineering-watched-videos';
 
@@ -11,9 +13,16 @@ const Index = () => {
     const saved = localStorage.getItem(WATCHED_VIDEOS_KEY);
     return saved ? JSON.parse(saved) : [];
   });
+  const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     localStorage.setItem(WATCHED_VIDEOS_KEY, JSON.stringify(watchedVideos));
+    
+    if (watchedVideos.length === videos.length) {
+      setShowConfetti(true);
+      toast("🎉 Congratulations! You've completed all videos!");
+      setTimeout(() => setShowConfetti(false), 5000); // Hide confetti after 5 seconds
+    }
   }, [watchedVideos]);
 
   const toggleVideoWatched = (videoId: string) => {
@@ -22,6 +31,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#ffffff] py-12 px-4 sm:px-6 lg:px-8 flex flex-col">
+      {showConfetti && <ReactConfetti />}
       <div className="max-w-7xl mx-auto flex-grow">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-[#38b6ff] mb-4">Platform Engineering</h1>
@@ -34,7 +44,7 @@ Below is a list of curated talks which have helped me understand how a platform 
 
         <ProgressBar completed={watchedVideos.length} total={videos.length} />
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <div className="flex flex-col items-center gap-8">
           {videos.map(video => <VideoCard key={video.id} video={video} isWatched={watchedVideos.includes(video.id)} onToggleWatched={() => toggleVideoWatched(video.id)} />)}
         </div>
       </div>
