@@ -2,20 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { videos } from '../data/platformEngineeringVideos';
 import VideoCard from '../components/VideoCard';
 import ProgressBar from '../components/ProgressBar';
+import Footer from '../components/Footer';
+
 const WATCHED_VIDEOS_KEY = 'platform-engineering-watched-videos';
+
 const Index = () => {
   const [watchedVideos, setWatchedVideos] = useState<string[]>(() => {
     const saved = localStorage.getItem(WATCHED_VIDEOS_KEY);
     return saved ? JSON.parse(saved) : [];
   });
+
   useEffect(() => {
     localStorage.setItem(WATCHED_VIDEOS_KEY, JSON.stringify(watchedVideos));
   }, [watchedVideos]);
+
   const toggleVideoWatched = (videoId: string) => {
     setWatchedVideos(prev => prev.includes(videoId) ? prev.filter(id => id !== videoId) : [...prev, videoId]);
   };
-  return <div className="min-h-screen bg-[#ffffff] py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+
+  return (
+    <div className="min-h-screen bg-[#ffffff] py-12 px-4 sm:px-6 lg:px-8 flex flex-col">
+      <div className="max-w-7xl mx-auto flex-grow">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-[#38b6ff] mb-4">Platform Engineering</h1>
           <p className="text-lg text-gray-600 text-left">Our mission is to help engineers build developer platforms. We focus on building platforms that are adored by users, flourish organically not due to mandates, are a breeze to operate. 
@@ -31,6 +38,9 @@ Below is a list of curated talks which have helped me understand how a platform 
           {videos.map(video => <VideoCard key={video.id} video={video} isWatched={watchedVideos.includes(video.id)} onToggleWatched={() => toggleVideoWatched(video.id)} />)}
         </div>
       </div>
-    </div>;
+      <Footer />
+    </div>
+  );
 };
+
 export default Index;
