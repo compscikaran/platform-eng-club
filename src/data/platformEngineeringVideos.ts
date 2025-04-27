@@ -31,5 +31,11 @@ export const videos: Video[] = [
     title: "Invisible Platform Engineeering",
     youtubeId: "M4Q4aXhJDb0",
     description: "Punit Lad, Lead Consultant @ Thoughtworks, PlatformCon 2024",
+  },
+  {
+    id: "6",
+    title: "Qualities of a Highly Effective Architect",
+    youtubeId: "QeKheNfO3Yg",
+    description: "Dr. Venkat Subramaniam, Devoxx Belgium 2019",
   }
 ];
